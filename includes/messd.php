@@ -15,12 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $id=$_SESSION['roll'] ;
     global $conn;
-    $select="SELECT * from mess WHERE `mess`.`Student_id` = '$id'";
-    $idselect=mysqli_query($conn,$select);
-    $num=mysqli_num_rows($idselect);
-    if($num>0){
-    $delete=mysqli_query($conn,"DELETE FROM `mess`");
-    }
+    
+    
+    
+    $delete=mysqli_query($conn,"DELETE FROM `mess` WHERE `mess`.`Student_id`=($id)");
+    
 
    
     
