@@ -8,7 +8,7 @@
  <style>
 
  </style>
-<link href="style.css" type="text/css" rel="stylesheet">
+<link href="styledj.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
