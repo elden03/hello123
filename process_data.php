@@ -1,6 +1,9 @@
 <?php
-require 'includes/config.inc.php';
-if(isset($_POST["submit"])){
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    require 'includes/config.inc.php';
+    session_start();
     $studentname=$_POST["student-name"];
     $studentid=$_POST["student-id"];
     $fees=$_POST["fees"];

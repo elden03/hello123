@@ -106,8 +106,15 @@
     <div id="due-amount-container">
         <div id="due-amount">
             <?php
+			$id=$_SESSION['roll'] ;
             // Include the PHP file directly
-            include 'process_data.php';
+            $query = "SELECT * FROM fees_unpaid WHERE student_id=($id) ";
+			$query_run = mysqli_query($conn, $query);
+			if(mysqli_num_rows($query_run) > 0){
+				foreach($query_run as $row){
+					echo($row['fee_amount']);
+				}
+			}
             ?>
         </div>
     </div>
