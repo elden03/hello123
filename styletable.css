@@ -18,7 +18,7 @@ th, td {
 }
 .content-table{
     border-collapse:collapse;
-    margin:5px 480px 50px 400px;
+    margin:5px auto 50px auto;
     font-size:0.6cm;
     min-width:400px;
     border-radius:5px 5px 0 0;
