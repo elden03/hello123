@@ -3,18 +3,20 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     require 'includes/config.inc.php';
-    session_start();
     $studentname=$_POST["student-name"];
     $studentid=$_POST["student-id"];
     $fees=$_POST["fees"];
+   
     if (isset($studentid)&&isset($fees)) {
+        $delete=mysqli_query($conn,"DELETE FROM `fees_unpaid` WHERE `fees_unpaid`.`student_id`=($studentid)");
+        
         $sql="INSERT INTO fees_unpaid(student_id,fee_amount)
         VALUES ('$studentid','$fees')";
         }
         
         $Execute=mysqli_query($conn, $sql);
         if($Execute){
-            echo 'Successfully completed';
+            header('Location: home_manager.php');
         }
         else{
             echo 'failed';
