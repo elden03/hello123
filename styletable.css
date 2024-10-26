@@ -1,13 +1,15 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: start;
+    
+    
+    display:block;
+    color:antiquewhite
     height: 100vh;
     margin: 100;
 }
 table {
+    
     border-collapse: collapse;
-    width: 50%; /* Optional: Adjust width as necessary */
+    width: 50%; 
 }
 th, td {
     border: 1px solid black;
@@ -16,7 +18,7 @@ th, td {
 }
 .content-table{
     border-collapse:collapse;
-    margin:15px 0;
+    margin:5px 480px 50px 400px;
     font-size:0.6cm;
     min-width:400px;
     border-radius:5px 5px 0 0;
